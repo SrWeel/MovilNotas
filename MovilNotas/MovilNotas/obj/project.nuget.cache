@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "3N2kw68rGH4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\actua\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oppsr\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\oppsr\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\oppsr\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\oppsr\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\oppsr\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\oppsr\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

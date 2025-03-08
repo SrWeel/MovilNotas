@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovilNotas.Views.HomePage"
+             BackgroundColor="#F4F4F4">
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Page Title -->
+            <Grid Padding="20" BackgroundColor="#FFFFFF" VerticalOptions="Start">
+                <Label Text="Mis Cursos" 
+                       FontSize="24" 
+                       FontAttributes="Bold" 
+                       TextColor="#333333" 
+                       HorizontalOptions="Center"/>
+            </Grid>
+
+            <!-- Courses List -->
+            <CollectionView x:Name="CursosCollectionView" 
+                            ItemsSource="{Binding}" 
+                            Margin="15"
+                            SelectionMode="Single"
+                            SelectionChanged="CursosCollectionView_SelectionChanged">
+                <!-- 🔹 Evento al seleccionar -->
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="#E0E0E0" 
+                               CornerRadius="10" 
+                               HasShadow="True" 
+                               Margin="0,0,0,10" 
+                               Padding="15">
+                            <StackLayout Spacing="10">
+                                <!-- Nombre de la Materia -->
+                                <Label Text="{Binding Materia}" 
+                                       FontSize="20" 
+                                       FontAttributes="Bold" 
+                                       TextColor="#2C3E50"/>
+
+                                <!-- Detalles del Curso -->
+                                <StackLayout Spacing="5">
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Label Text="Carrera:" FontAttributes="Bold" TextColor="#34495E"/>
+                                        <Label Text="{Binding Carrera}" TextColor="#34495E"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Label Text="Nivel:" FontAttributes="Bold" TextColor="#34495E"/>
+                                        <Label Text="{Binding Nivel}" TextColor="#34495E"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Label Text="Jornada:" FontAttributes="Bold" TextColor="#2980B9"/>
+                                        <Label Text="{Binding Jornada}" TextColor="#2980B9"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Label Text="Paralelo:" FontAttributes="Bold" TextColor="#C0392B"/>
+                                        <Label Text="{Binding Paralelo}" TextColor="#C0392B"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MovilNotas.Views.EstudianteDetallesPage"
+    BackgroundColor="#F4F4F4">
+
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="15">
+            <!-- Información del estudiante -->
+            <Frame Padding="10" BackgroundColor="White" CornerRadius="10" HasShadow="True">
+                <StackLayout Spacing="5">
+                    <Label Text="{Binding Nombres}" FontSize="20" FontAttributes="Bold" TextColor="#2C3E50"/>
+                    <Label Text="{Binding Apellidos}" FontSize="18" TextColor="#34495E"/>
+                    <Label Text="{Binding Cedula}" FontSize="16" FontAttributes="Italic" TextColor="#7F8C8D"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- CarouselView para los bimestres -->
+            <CarouselView ItemsSource="{Binding NotasList}" HorizontalScrollBarVisibility="Never">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="5">
+                            <!-- Encabezado del bimestre -->
+                            <Label Text="{Binding Bimestre}" FontSize="18" FontAttributes="Bold" TextColor="#2980B9" HorizontalOptions="Center" Margin="0,0,0,10"/>
+
+                            <!-- Lista de categorías -->
+                            <StackLayout BindableLayout.ItemsSource="{Binding CategoriasList}" Spacing="15">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout>
+                                            <!-- Categoría como header con fondo gris -->
+                                            <Frame BackgroundColor="#EAEAEA" Padding="10" CornerRadius="5" HasShadow="False" Margin="0,0,0,10">
+                                                <Label Text="{Binding Categoria}" FontSize="15" FontAttributes="Bold" TextColor="#34495E"/>
+                                            </Frame>
+
+                                            <!-- Aportes -->
+                                            <StackLayout BindableLayout.ItemsSource="{Binding Aportes}" Spacing="10">
+                                                <BindableLayout.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Frame BorderColor="#DDDDDD" BackgroundColor="White" Padding="10" Margin="0,0,0,5" CornerRadius="5" HasShadow="False">
+                                                            <StackLayout>
+                                                                <Grid>
+                                                                    <Grid.ColumnDefinitions>
+                                                                        <ColumnDefinition Width="*"/>
+                                                                        <ColumnDefinition Width="Auto"/>
+                                                                    </Grid.ColumnDefinitions>
+                                                                    <Label Text="{Binding Titulo}" FontSize="15" FontAttributes="Bold" TextColor="#2C3E50" Grid.Column="0"/>
+                                                                    <Label Text="{Binding Nota}" FontSize="15" TextColor="#C0392B" FontAttributes="Bold" Grid.Column="1"/>
+                                                                </Grid>
+                                                                <Label Text="{Binding Descripcion}" FontSize="13" TextColor="#7F8C8D" Margin="0,5,0,0"/>
+                                                            </StackLayout>
+                                                        </Frame>
+                                                    </DataTemplate>
+                                                </BindableLayout.ItemTemplate>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

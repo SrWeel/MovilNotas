@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MovilNotas.Views.CrearAportePage"
+    Title="Crear Aporte"
+    BackgroundColor="#F4F4F4">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" Spacing="15">
+                <Label Text="Crear Aporte" 
+               FontSize="24" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center" />
+
+                <Label Text="Título:" />
+                <Entry x:Name="tituloEntry" Placeholder="Ingrese el título" />
+
+                <Label Text="Descripción:" />
+                <Editor x:Name="descripcionEditor" 
+                HeightRequest="100" 
+                Placeholder="Ingrese la descripción (opcional)" />
+
+                <Label Text="Categoría (ID):" />
+                <Entry x:Name="categoriaEntry" Placeholder="Ingrese el ID de categoría" Keyboard="Numeric" />
+
+                <Label Text="Bimestre (ID):" />
+                <Entry x:Name="bimestreEntry" Placeholder="Ingrese el ID de bimestre" Keyboard="Numeric" />
+
+                <Label Text="Materia (ID):" />
+                <Entry x:Name="materiaEntry" Placeholder="Ingrese el ID de materia" Keyboard="Numeric" />
+
+                <Label Text="Jornada (ID):" />
+                <Entry x:Name="jornadaEntry" Placeholder="Ingrese el ID de jornada" Keyboard="Numeric" />
+
+                <Label Text="Nivel (ID):" />
+                <Entry x:Name="nivelEntry" Placeholder="Ingrese el ID de nivel" Keyboard="Numeric" />
+
+                <Label Text="Paralelo (ID):" />
+                <Entry x:Name="paraleloEntry" Placeholder="Ingrese el ID de paralelo" Keyboard="Numeric" />
+
+                <Button Text="Crear Aporte" 
+                Clicked="OnCrearAporteClicked"
+                BackgroundColor="#3498db"
+                TextColor="White"
+                CornerRadius="5" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

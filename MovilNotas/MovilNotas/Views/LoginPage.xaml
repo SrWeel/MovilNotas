@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovilNotas.Views.LoginPage"
+             BackgroundColor="#FFFFFF">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="30">
+                <!-- Logo Section -->
+                <Frame HeightRequest="150" 
+                       WidthRequest="150" 
+                       CornerRadius="75" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center"
+                       BorderColor="Transparent"
+                       HasShadow="True"
+                       BackgroundColor="#F0F0F0">
+                    <Image Source="logo.png" 
+                           Aspect="AspectFit" 
+                           HeightRequest="100" 
+                           WidthRequest="100"/>
+                </Frame>
+
+                <!-- Login Title -->
+                <Label Text="Iniciar Sesión" 
+                       FontSize="24" 
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" 
+                       TextColor="#2C3E50"/>
+
+                <!-- Username Entry -->
+                <Frame BorderColor="#E0E0E0" 
+                       CornerRadius="10" 
+                       Padding="10">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Image Source="user_icon.png" 
+                               HeightRequest="25" 
+                               WidthRequest="25" 
+                               VerticalOptions="Center"/>
+                        <Entry x:Name="entryUsuario" 
+                               Placeholder="Correo Electrónico" 
+                               PlaceholderColor="#A0A0A0"
+                               TextColor="#333333"
+                               HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Password Entry -->
+                <Frame BorderColor="#E0E0E0" 
+                       CornerRadius="10" 
+                       Padding="10">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Image Source="lock_icon.png" 
+                               HeightRequest="25" 
+                               WidthRequest="25" 
+                               VerticalOptions="Center"/>
+                        <Entry x:Name="entryClave" 
+                               Placeholder="Contraseña" 
+                               IsPassword="True"
+                               PlaceholderColor="#A0A0A0"
+                               TextColor="#333333"
+                               HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Login Button -->
+                <Button Text="Ingresar" 
+                        Clicked="BtnLogin_Clicked"
+                        BackgroundColor="#3498DB"
+                        TextColor="White"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        FontSize="18"/>
+
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
