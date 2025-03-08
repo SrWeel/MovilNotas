@@ -3459,11 +3459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\actua\\MovilNotas\\MovilNotas\\MovilNotas.Android\\MovilNotas.Android.csproj",
+      "projectUniqueName": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\MovilNotas\\MovilNotas\\MovilNotas.Android\\MovilNotas.Android.csproj",
       "projectName": "MovilNotas.Android",
-      "projectPath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\actua\\MovilNotas\\MovilNotas\\MovilNotas.Android\\MovilNotas.Android.csproj",
+      "projectPath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\MovilNotas\\MovilNotas\\MovilNotas.Android\\MovilNotas.Android.csproj",
       "packagesPath": "C:\\Users\\oppsr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\actua\\MovilNotas\\MovilNotas\\MovilNotas.Android\\obj\\",
+      "outputPath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\MovilNotas\\MovilNotas\\MovilNotas.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "UsingMicrosoftNETSdk": false,
@@ -3485,8 +3485,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\actua\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj": {
-              "projectPath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\actua\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj"
+            "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj": {
+              "projectPath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj"
             }
           }
         }

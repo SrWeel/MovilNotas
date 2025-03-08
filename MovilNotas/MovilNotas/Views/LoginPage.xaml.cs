@@ -10,6 +10,7 @@ namespace MovilNotas.Views
     public partial class LoginPage : ContentPage
     {
         private readonly ApiService _apiService = new ApiService();
+        //private readonly ApiService _apiService = new ApiService();
 
         public LoginPage()
         {
@@ -32,8 +33,8 @@ namespace MovilNotas.Views
             if (resultado.Success)
             {
                 await DisplayAlert("Éxito", "Login correcto", "OK");
-                // Pasar la lista de cursos a HomePage
-                await Navigation.PushAsync(new HomePage(resultado.Cursos));
+                await Navigation.PushAsync(new HomePage(resultado.Cursos, resultado.Id));
+
             }
             else
             {

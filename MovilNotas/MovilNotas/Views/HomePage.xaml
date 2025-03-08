@@ -4,65 +4,148 @@
              x:Class="MovilNotas.Views.HomePage"
              BackgroundColor="#F4F4F4">
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Page Title -->
-            <Grid Padding="20" BackgroundColor="#FFFFFF" VerticalOptions="Start">
-                <Label Text="Mis Cursos" 
-                       FontSize="24" 
-                       FontAttributes="Bold" 
-                       TextColor="#333333" 
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Botón para mostrar/ocultar el formulario -->
+            <Button Grid.Row="0"
+                    x:Name="ToggleFormButton"
+                    Text="Crear Nuevo Aporte" 
+                    BackgroundColor="#2980B9"
+                    TextColor="White"
+                    Margin="20,10"
+                    CornerRadius="10"
+                    Clicked="ToggleFormButton_Clicked"/>
+
+            <!-- Formulario (inicialmente oculto) -->
+            <StackLayout Grid.Row="1" 
+                         x:Name="FormularioStackLayout"
+                         Padding="20" 
+                         Spacing="15"
+                         IsVisible="False"
+                         BackgroundColor="#FFFFFF">
+
+                <Label Text="Crear Nuevo Aporte"
+                       FontSize="26"
+                       TextColor="#34495E"
+                       FontAttributes="Bold"
                        HorizontalOptions="Center"/>
-            </Grid>
 
-            <!-- Courses List -->
-            <CollectionView x:Name="CursosCollectionView" 
-                            ItemsSource="{Binding}" 
-                            Margin="15"
-                            SelectionMode="Single"
-                            SelectionChanged="CursosCollectionView_SelectionChanged">
-                <!-- 🔹 Evento al seleccionar -->
+                <Entry x:Name="TituloEntry"
+                       Placeholder="Título del aporte"
+                       FontSize="18"
+                       BackgroundColor="#F3F3F3"/>
 
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BorderColor="#E0E0E0" 
-                               CornerRadius="10" 
-                               HasShadow="True" 
-                               Margin="0,0,0,10" 
-                               Padding="15">
-                            <StackLayout Spacing="10">
-                                <!-- Nombre de la Materia -->
-                                <Label Text="{Binding Materia}" 
-                                       FontSize="20" 
-                                       FontAttributes="Bold" 
-                                       TextColor="#2C3E50"/>
+                <Editor x:Name="DescripcionEditor"
+                        Placeholder="Descripción (Opcional)"
+                        FontSize="16"
+                        HeightRequest="100"
+                        BackgroundColor="#F3F3F3"/>
 
-                                <!-- Detalles del Curso -->
-                                <StackLayout Spacing="5">
-                                    <StackLayout Orientation="Horizontal" Spacing="5">
-                                        <Label Text="Carrera:" FontAttributes="Bold" TextColor="#34495E"/>
-                                        <Label Text="{Binding Carrera}" TextColor="#34495E"/>
-                                    </StackLayout>
+                <Picker x:Name="CategoriasPicker"
+                        Title="Categoría"
+                        ItemDisplayBinding="{Binding nombre}"/>
 
-                                    <StackLayout Orientation="Horizontal" Spacing="5">
-                                        <Label Text="Nivel:" FontAttributes="Bold" TextColor="#34495E"/>
-                                        <Label Text="{Binding Nivel}" TextColor="#34495E"/>
-                                    </StackLayout>
+                <Picker x:Name="BimestresPicker"
+                        Title="Bimestre"
+                        ItemDisplayBinding="{Binding nombre}"/>
 
-                                    <StackLayout Orientation="Horizontal" Spacing="5">
-                                        <Label Text="Jornada:" FontAttributes="Bold" TextColor="#2980B9"/>
-                                        <Label Text="{Binding Jornada}" TextColor="#2980B9"/>
-                                    </StackLayout>
+                <Picker x:Name="MateriasPicker"
+                        Title="Materia"
+                        ItemDisplayBinding="{Binding nombre}"/>
 
-                                    <StackLayout Orientation="Horizontal" Spacing="5">
-                                        <Label Text="Paralelo:" FontAttributes="Bold" TextColor="#C0392B"/>
-                                        <Label Text="{Binding Paralelo}" TextColor="#C0392B"/>
+                <Picker x:Name="JornadasPicker"
+                        Title="Jornada"
+                        ItemDisplayBinding="{Binding nombre}"/>
+
+                <Picker x:Name="NivelesPicker"
+                        Title="Nivel"
+                        ItemDisplayBinding="{Binding nombre}"/>
+
+                <Picker x:Name="ParalelosPicker"
+                        Title="Paralelo"
+                        ItemDisplayBinding="{Binding nombre}"/>
+
+                <Button Text="Crear Aporte"
+                        BackgroundColor="#2980B9"
+                        TextColor="White"
+                        FontSize="18"
+                        CornerRadius="10"
+                        Margin="0,10,0,0"
+                        Clicked="BtnCrearAporte_Clicked"/>
+
+                <Button Text="Cancelar"
+                        BackgroundColor="#E74C3C"
+                        TextColor="White"
+                        FontSize="18"
+                        CornerRadius="10"
+                        Margin="0,5,0,0"
+                        Clicked="BtnCancelar_Clicked"/>
+            </StackLayout>
+
+            <!-- Lista de Materias (visible por defecto) -->
+            <StackLayout Grid.Row="1" 
+                         x:Name="MateriasStackLayout">
+                <!-- Page Title -->
+                <Grid Padding="20" BackgroundColor="#FFFFFF" VerticalOptions="Start">
+                    <Label Text="Mis Cursos" 
+                           FontSize="24" 
+                           FontAttributes="Bold" 
+                           TextColor="#333333" 
+                           HorizontalOptions="Center"/>
+                </Grid>
+
+                <!-- Courses List -->
+                <CollectionView x:Name="CursosCollectionView" 
+                                ItemsSource="{Binding}" 
+                                Margin="15"
+                                SelectionMode="Single"
+                                SelectionChanged="CursosCollectionView_SelectionChanged">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="#E0E0E0" 
+                                   CornerRadius="10" 
+                                   HasShadow="True" 
+                                   Margin="0,0,0,10" 
+                                   Padding="15">
+                                <StackLayout Spacing="10">
+                                    <!-- Nombre de la Materia -->
+                                    <Label Text="{Binding Materia}" 
+                                           FontSize="20" 
+                                           FontAttributes="Bold" 
+                                           TextColor="#2C3E50"/>
+
+                                    <!-- Detalles del Curso -->
+                                    <StackLayout Spacing="5">
+                                        <StackLayout Orientation="Horizontal" Spacing="5">
+                                            <Label Text="Carrera:" FontAttributes="Bold" TextColor="#34495E"/>
+                                            <Label Text="{Binding Carrera}" TextColor="#34495E"/>
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" Spacing="5">
+                                            <Label Text="Nivel:" FontAttributes="Bold" TextColor="#34495E"/>
+                                            <Label Text="{Binding Nivel}" TextColor="#34495E"/>
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" Spacing="5">
+                                            <Label Text="Jornada:" FontAttributes="Bold" TextColor="#2980B9"/>
+                                            <Label Text="{Binding Jornada}" TextColor="#2980B9"/>
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" Spacing="5">
+                                            <Label Text="Paralelo:" FontAttributes="Bold" TextColor="#C0392B"/>
+                                            <Label Text="{Binding Paralelo}" TextColor="#C0392B"/>
+                                        </StackLayout>
                                     </StackLayout>
                                 </StackLayout>
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
