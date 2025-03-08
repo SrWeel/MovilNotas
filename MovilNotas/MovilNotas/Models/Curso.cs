@@ -27,8 +27,13 @@ namespace MovilNotas.Models
 	}
 
 
+    public class ParaleloSrweel
+    {
+        public int id { get; set; }
+        public string nombre { get; set; }
+    }
 
-	public class Nivel
+    public class Nivel
 	{
 		public int NivelId { get; set; }
 		public string Nombre { get; set; }

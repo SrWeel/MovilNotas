@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638770444940419789
+_nugetassetstimestamp=638769689178665641
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=c:\users\oppsr\onedrive\escritorio\git\movil\actua\movilnotas\movilnotas\movilnotas.android\movilnotas.android.csproj
+projectfullpath=c:\users\oppsr\onedrive\escritorio\git\movil\movilnotas\movilnotas\movilnotas.android\movilnotas.android.csproj

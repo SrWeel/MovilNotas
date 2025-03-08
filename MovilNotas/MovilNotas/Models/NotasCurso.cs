@@ -51,8 +51,48 @@ namespace MovilNotas.Models
 		[JsonProperty("descripcion")]
 		public string Descripcion { get; set; }
 	}
+	
+	public class AporteSrweel
+	{
+        public int id_categoria { get; set; }
+        public int id_bimestre { get; set; }
+        public string titulo { get; set; }
+        public string descripcion { get; set; }
+        public int id_materia { get; set; }
+        public int id_jornada { get; set; }
+        public int id_nivel { get; set; }
+        public int id_paralelo { get; set; }
+    }
+    public class CategoriaSrweel
+    {
+        public int id { get; set; }
+        public string nombre { get; set; }
+    }
+    public class BimestreSrweel
+    {
+        public int id { get; set; }
+        public string nombre { get; set; }
+    }
 
-	public class Categoria
+    public class MateriaSrweel
+    {
+        public int id { get; set; }
+        public string nombre { get; set; }
+    }
+    public class JornadaSrweel
+    {
+        public int id { get; set; }
+        public string nombre { get; set; }
+    }
+    public class NivelSrweel
+    {
+        public int id { get; set; }
+        public string nombre { get; set; }
+    }
+
+
+
+    public class Categoria
 	{
 		[JsonProperty("categoria_id")]
 		public int CategoriaId { get; set; }

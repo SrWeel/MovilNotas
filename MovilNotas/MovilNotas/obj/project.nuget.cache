@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3N2kw68rGH4=",
+  "dgSpecHash": "ELtSK+DlBz4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\actua\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj",
+  "projectFilePath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oppsr\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\oppsr\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

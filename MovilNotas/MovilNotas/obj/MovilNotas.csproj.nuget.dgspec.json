@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\actua\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj": {}
+    "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\actua\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj": {
+    "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\actua\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj",
+        "projectUniqueName": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj",
         "projectName": "MovilNotas",
-        "projectPath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\actua\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj",
+        "projectPath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\MovilNotas\\MovilNotas\\MovilNotas\\MovilNotas.csproj",
         "packagesPath": "C:\\Users\\oppsr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\actua\\MovilNotas\\MovilNotas\\MovilNotas\\obj\\",
+        "outputPath": "C:\\Users\\oppsr\\OneDrive\\Escritorio\\git\\movil\\MovilNotas\\MovilNotas\\MovilNotas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
